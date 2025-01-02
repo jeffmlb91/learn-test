@@ -11,3 +11,9 @@ console.log(`the house has ${myHouse.rooms} and ${myHouse.livingRoom} living Roo
 //Type Coercion: This is when JavaScript automatically converts one data type to another to make operations work. For example, adding a string and a number:
 
 console.log("5" + 5);
+
+//Functional Programming: This paradigm focuses on pure functions, immutability, and higher-order functions. Pure functions produce the same output for the same input and avoid side effects. For example:
+
+const add = (a, b) => a + b;
+console.log(add(2,3))
+
