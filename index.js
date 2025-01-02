@@ -8,3 +8,6 @@ const house = { rooms: 4, kitchen: 1, livingRoom: 3, garden: true}
 const myHouse = Object.create(house);
 console.log(`the house has ${myHouse.rooms} and ${myHouse.livingRoom} living Room`)
 
+//Type Coercion: This is when JavaScript automatically converts one data type to another to make operations work. For example, adding a string and a number:
+
+console.log("5" + 5);
