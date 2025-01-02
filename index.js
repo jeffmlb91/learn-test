@@ -25,4 +25,14 @@ async function fetchData() {
     console.log(data)
 }
 
-fetchData()
+//fetchData()
+
+//Input Validation: Ensuring user inputs are valid prevents errors and security issues. For instance, validating a form field: javascript copy code
+
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email)
+
+}
+
+console.log(validateEmail("test@gmail.com")) //returns true
