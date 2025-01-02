@@ -17,3 +17,12 @@ console.log("5" + 5);
 const add = (a, b) => a + b;
 console.log(add(2,3))
 
+//Asynchronous Programming: Asynchronous code allows tasks to run in the background while the program continues. Promises and async/await are common in JavaScript to handle asynchronous tasks like API calls. For example:
+
+async function fetchData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await response.json()
+    console.log(data)
+}
+
+fetchData()
