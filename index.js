@@ -39,7 +39,12 @@ console.log(validateEmail("test@gmail.com")) //returns true
 
 //Event Handling Reacting to user actions, such as button clicks or form submissions. In JavaScript:
 
-document.getElementById("submission").addEventListener('click', () => {
-    alert("button has been clicked")
-    console.log("Button has clicked")
-})
+// document.getElementById("submission").addEventListener('click', () => {
+//     alert("button has been clicked")
+//     console.log("Button has clicked")
+// })
+
+console.log("Test")
+console.log("Test2")
+process.stdout.write("Hello there. ")
+process.stdout.write("Hello there 2")
