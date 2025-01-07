@@ -46,5 +46,11 @@ console.log(validateEmail("test@gmail.com")) //returns true
 
 console.log("Test")
 console.log("Test2")
-process.stdout.write("Hello there. ")
-process.stdout.write("Hello there 2")
+// process.stdout.write("Hello there. ")
+// process.stdout.write("Hello there 2")
+
+
+document.getElementById("prompt").addEventListener('click', () => {
+    const sayName = prompt("What is your name ?")
+    alert(`Hello ${sayName}`)  
+})

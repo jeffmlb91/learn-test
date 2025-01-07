@@ -45,3 +45,13 @@ fruits = "Apples"
 
 The above slides show how assigning a variable into another value will reassign it to a new value while losing the link to the previous value.
 
+`NOTE`: Lost values cannot be retrieved once you reach a point in the program where no variable is assigned to that value. JavaScript will destroy those values automatically.
+
+### Copy values
+We can use values through variables and assign them to other variables. We do this by assigning the variable to the other variable directly.
+
+```js 
+let fruits = "Mangoes"
+let juicyFruit = fruits
+
+```
