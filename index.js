@@ -50,7 +50,28 @@ console.log("Test2")
 // process.stdout.write("Hello there 2")
 
 
-document.getElementById("prompt").addEventListener('click', () => {
-    const sayName = prompt("What is your name ?")
-    alert(`Hello ${sayName}`)  
-})
+// document.getElementById("prompt").addEventListener('click', () => {
+//     const sayName = prompt("What is your name ?")
+//     alert(`Hello ${sayName}`)  
+// })
+
+// const name = prompt("What is your name?")
+// const answer = alert(`my name is ${name}`)
+// //console.log(answer)
+
+const name = prompt("What is your name?")
+const answer = console.log(`my name is ${name}`)
+//console.log(answer)
+
+
+const temp1 = 36.9
+const temp2 = 37.9
+const temp3 = 38.9
+console.log(temp1, temp2, temp3)
+
+const userInput = prompt("Enter a number")
+const responseValue = Number(userInput)
+console.log(responseValue)
+
+const secondUserResponse = Number(prompt('What is your name?'))
+alert(secondUserResponse)
