@@ -87,6 +87,19 @@ const b = y;
 console.log(x, y)
 console.log(a, b)
 
+// Primitive type example 
+
+let firstNum = 10;
+let copy = firstNum;
+
+console.log(firstNum)
+console.log(copy)
+
+
+copy = 20
+
+console.log(firstNum)
+console.log(copy)
 
 const firsValue = 10;
 const secondValue = 'abc'
@@ -98,3 +111,23 @@ newFirstVar = 5;
 newSecondVar = "Changed"
 
 console.log(firsValue, secondValue, newFirstVar, newSecondVar )
+
+
+// Reference type example,
+const arr = [1, 2]
+
+const copyArr = arr;
+
+console.log(arr)
+console.log(copyArr)
+
+copyArr.push(7);
+console.log(arr)
+console.log(copyArr)
+
+
+// The address stored in obj changes. The first object is still present in memory, and so is the next object:
+// by reference, meaning the variable holds a reference (or pointer) to the memory location where the actual data is stored.
+// there should be both obj in memory
+let obj = { first: "reference"};
+obj = { second: " reference 2"}

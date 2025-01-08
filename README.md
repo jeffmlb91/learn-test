@@ -59,6 +59,12 @@ let juicyFruit = fruits
 ## Value vs. Reference
 Learn how some data types are copied by value and others by reference, and what this means when we write code. This concept is at the root of countless bugs that plague websites today. A simple look at computer memory explains what’s happening.
 
+
+#### Primitive Types vs. Reference Types
+
+Primitive types (e.g., numbers, strings) are passed by value, meaning a copy of the value is made.
+Reference types (e.g., arrays, objects) are passed by reference, meaning the variable holds a reference (or pointer) to the memory location where the actual data is stored. 
+
 ### 1 . Primitives data types
 
 Primitives refer to basic data types that are not objects and have no methods. Examples include numbers, strings, booleans, null, undefined, symbol, and bigint.
@@ -83,3 +89,16 @@ const z = null; //Null
 When we assign these variables to other variables using =, we copy the value to the new variable. They are copied by value.
 
 
+### 2. Objects
+
+#### Assigning by Reference
+
+When a reference type value, an object, is copied to another variable using =, the address of that value is what’s actually copied over as if it were a primitive. Objects are copied by copying the reference instead of by copying the value. The object itself is unchanged and static. The only thing copied is the reference, the address, of the object.
+
+- The address stored in obj changes. The first object is still present in memory, and so is the next object:
+- By reference, meaning the variable holds a reference (or pointer) to the memory location where the actual data is stored.
+- There should be both obj in memory
+```
+let obj = { first: "reference"};
+obj = { second: " reference 2"}
+```
