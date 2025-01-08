@@ -55,3 +55,31 @@ let fruits = "Mangoes"
 let juicyFruit = fruits
 
 ```
+
+## Value vs. Reference
+Learn how some data types are copied by value and others by reference, and what this means when we write code. This concept is at the root of countless bugs that plague websites today. A simple look at computer memory explains what’s happening.
+
+### 1 . Primitives data types
+
+Primitives refer to basic data types that are not objects and have no methods. Examples include numbers, strings, booleans, null, undefined, symbol, and bigint.
+
+- Primitives data types:
+  * Number
+  * String
+  * Boolean
+  * Undefined
+  * Null.
+  * symbol
+  * Bigint
+
+Example
+
+```
+const x = 10; // Number
+const y = 'abc'; //String
+const z = null; //Null
+```
+
+When we assign these variables to other variables using =, we copy the value to the new variable. They are copied by value.
+
+

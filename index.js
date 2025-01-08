@@ -59,8 +59,8 @@ console.log("Test2")
 // const answer = alert(`my name is ${name}`)
 // //console.log(answer)
 
-const name = prompt("What is your name?")
-const answer = console.log(`my name is ${name}`)
+///const name = prompt("What is your name?")
+//const answer = console.log(`my name is ${name}`)
 //console.log(answer)
 
 
@@ -69,9 +69,32 @@ const temp2 = 37.9
 const temp3 = 38.9
 console.log(temp1, temp2, temp3)
 
-const userInput = prompt("Enter a number")
-const responseValue = Number(userInput)
-console.log(responseValue)
+//const userInput = prompt("Enter a number")
+//const responseValue = Number(userInput)
+//console.log(responseValue)
 
-const secondUserResponse = Number(prompt('What is your name?'))
-alert(secondUserResponse)
+//const secondUserResponse = Number(prompt('What is your name?'))
+//alert(secondUserResponse)
+
+// copying value 
+
+const x = 10;
+const y = 'abc';
+
+const a = x;
+const b = y;
+
+console.log(x, y)
+console.log(a, b)
+
+
+const firsValue = 10;
+const secondValue = 'abc'
+
+let newFirstVar = firsValue;
+let newSecondVar = secondValue;
+
+newFirstVar = 5;
+newSecondVar = "Changed"
+
+console.log(firsValue, secondValue, newFirstVar, newSecondVar )
