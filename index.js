@@ -131,3 +131,75 @@ console.log(copyArr)
 // there should be both obj in memory
 let obj = { first: "reference"};
 obj = { second: " reference 2"}
+
+
+
+console.log(obj)
+
+
+// exmplafe for passing by value vs refernce using Arrays
+
+// First passing by value 
+let firstBucket = ["ananas", "magoes", "oranges"]
+
+console.log('first list is ', firstBucket)
+
+copyFirstBucket = firstBucket;
+
+copyFirstBucket.push('Tomatoes', "papayas", "Avocatos")
+
+console.log("my copied list ", copyFirstBucket)
+console.log('first list is ', firstBucket)
+// Second passing by reference 
+
+let secondBucket = ["ananas", "magoes", "oranges"]
+
+secondBucket = ["Paprika", "Bananas", "clementines"]
+
+console.log(secondBucket)
+
+// exmplafe for passing by value vs refernce using Arrays
+
+let firstPerson = {
+    name: "Paul",
+    age: 20,
+    profession: "Prompt Engineer"
+}
+
+copyFirstPerson = firstPerson;
+console.log(copyFirstPerson)
+
+copyFirstPerson.name = "James"
+copyFirstPerson.age = "25"
+copyFirstPerson.profession = "Software Engineer"
+
+console.log(copyFirstPerson)
+console.log(firstPerson) // Data was replace because the variable holding the reference to the pointer was changed.  
+
+
+const student = { 
+    name: 'Mark',
+    age: 25,
+    courses: ["French", "English", "Lingala"],
+    occupation: "Software Engineer",
+
+}
+
+function changeInfo(arg) {
+    arg.name = "Paul"
+    console.log(arg)
+}
+
+changeInfo(student);
+
+// == and ===
+
+const arrRef = ["Hello"];
+const arrRef2 = arrRef;
+
+console.log(arrRef === arrRef2 ); //True
+
+const arrReff = ["Hello"];
+const arrRefff = ["Hello"];
+
+console.log(arrReff === arrRefff ); //False

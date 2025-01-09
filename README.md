@@ -102,3 +102,7 @@ When a reference type value, an object, is copied to another variable using =, t
 let obj = { first: "reference"};
 obj = { second: " reference 2"}
 ```
+
+When there are no references to an object remaining, as we see for the address #234 above, the JavaScript engine can perform garbage collection. This just means that the programmer has lost all references to the object and can’t use the object anymore, so the engine can safely delete it from memory.
+
+In this case, the object { first: 'reference' } is no longer accessible through any variables and is available to the engine for garbage collection.
