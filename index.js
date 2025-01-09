@@ -221,3 +221,12 @@ const arrReff = ["Hello"];
 const arrRefff = ["Hello"];
 
 console.log(arrReff === arrRefff ); //False
+
+
+const fruitBacket = ["Organge", "Avocato", "Strawberry"]
+const fruitBucketCopy = fruitBacket
+const fruitBacketSecondBucket = ["Organge", "Avocato", "Strawberry"]
+
+console.log(fruitBacket === fruitBucketCopy)
+console.log(fruitBacket === fruitBacketSecondBucket)
+
