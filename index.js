@@ -192,6 +192,24 @@ function changeInfo(arg) {
 
 changeInfo(student);
 
+//
+
+const userInfo = {
+    firstName: "Thiery",
+    lastName: "Robinson",
+    age: 30,
+    checking: "$6000",
+    saving: "$154,000",
+}
+
+function makeTransaction(i) {
+    i.checking= "$10000";
+    i.saving="$546,000"
+    console.log(i)
+}
+
+makeTransaction(userInfo);
+
 // == and ===
 
 const arrRef = ["Hello"];
