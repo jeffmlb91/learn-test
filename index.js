@@ -277,3 +277,19 @@ const changedAlex = changeAgeImpure(alex); // it stored in a new variable
 console.log(alex); // -> { name: 'Alex', age: 25 }
 console.log(changedAlex); // -> { name: 'Alex', age: 25 }
 console.log(alex === changedAlex); // -> true  // we are comparing alex variable data to changedAlex variable data
+
+function changeAgePure(human) {
+    const newPersonObj = JSON.parse(JSON.stringify(human));
+    newPersonObj.age = 25;
+    return newPersonObj;
+    
+}
+
+const mark = {
+    name: "Mark",
+    age: 30,
+}
+
+const markChanged = changeAgePure(mark)
+console.log(mark)
+console.log(markChanged)
