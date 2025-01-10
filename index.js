@@ -293,3 +293,32 @@ const mark = {
 const markChanged = changeAgePure(mark)
 console.log(mark)
 console.log(markChanged)
+
+
+function craftCars (car) {
+    const newModel = JSON.parse(JSON.stringify(car));
+    newModel.year = 2025;
+    return newModel;
+}
+
+const toyota = {
+    model: "Lexus",
+    year: 2022,
+    engineType: "V6"
+}
+
+const honda = {
+    model: "Acura",
+    year: "2021",
+    engineType: "V6",
+}
+
+const releasedCar = craftCars(toyota);
+const releasedCar2 = craftCars(honda);
+
+console.log(toyota)
+console.log(honda)
+
+console.log(`new release is`, releasedCar)
+console.log(`new release is`, releasedCar2)
+
