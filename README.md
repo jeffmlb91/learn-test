@@ -137,3 +137,101 @@ In the example above, we give `firstNumber` the value 100. When we pass it into 
 | multiply | <#333> |
 | x | 100 |
 | y | 2 |
+
+
+
+### Duplicating and changing an Object using
+- First method:
+
+In this function, we use JSON.stringify to transform the object we’re passed into a string, and then parse it back into an object with `JSON.parse.` This isn’t the best way to duplicate an object, but it’ll work here.
+
+By performing this transformation and storing the result in a new variable, we’ve created a new object. The new object has the same properties as the original but it is a distinctly separate object in memory.
+
+When we change the age property on this new object, the original is unaffected. This function is now pure. It can’t affect any object outside its own scope, not even the object that was passed in.
+
+The new object needs to be returned and stored in a new variable or else it gets garbage collected once the function completes, as the object is no longer in scope.
+
+```JS
+function craftCars (car) {
+    const newModel = JSON.parse(JSON.stringify(car));
+    newModel.year = 2025;
+    return newModel;
+}
+
+const toyota = {
+    model: "Lexus",
+    year: 2022,
+    engineType: "V6"
+}
+
+const honda = {
+    model: "Acura",
+    year: "2021",
+    engineType: "V6",
+}
+
+const releasedCar = craftCars(toyota);
+const releasedCar2 = craftCars(honda);
+
+console.log(toyota)
+console.log(honda)
+
+console.log(`new release is`, releasedCar)
+console.log(`new release is`, releasedCar2)
+
+
+```
+
+### Second exmaple 
+
+Lets look at the following 
+
+```JS
+    function changeAgeAndReference (someone) {
+    someone.age = 25;
+    someone = {
+        name: "John",
+        age: 50
+    }
+    return someone;
+}
+
+const personObject1 = {
+    name: "Alex",
+    age: 30,
+}
+
+console.log(personObject1) // This is the original object unchanged. changeAgeAndReference not called 
+
+const personObject2 = changeAgeAndReference(personObject1);
+console.log(personObject1) // 25
+console.log(personObject2) //50
+
+```
+Why Does personObject1 Show 25?
+
+- Pass-by-Reference Behavior:
+
+When you pass `personObject1` to the `changeAgeAndReference` function, the variable `someone` points to the same `object` in `memory` as `personObject1`.
+Thus, the line `someone.age = 25;` modifies the `age` property of the original object `(personObject1)`.
+
+- Reassignment Does Not Affect the Original:
+
+The line `someone = { name: "John", age: 50 }`; `reassigns` the `someone` variable to point to a `new object in memory`.
+This does not affect the original object `(personObject1)` because `someone` is now disconnected from it.
+
+```JS
+    Key Takeaways:
+
+*** Modification vs. Reassignment *** :
+
+Direct modifications (e.g., someone.age = 25) affect the original object because they operate on the same memory reference.
+Reassignment (e.g., someone = {...}) creates a new object and disconnects the local variable (someone) from the original reference.
+Effect on personObject1:
+
+The change to someone.age before reassignment permanently affects personObject1.
+Effect on personObject2:
+
+The return value of the function ({ name: "John", age: 50 }) is a completely new object, unrelated to personObject1.
+
+```

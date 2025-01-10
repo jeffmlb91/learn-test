@@ -322,3 +322,27 @@ console.log(honda)
 console.log(`new release is`, releasedCar)
 console.log(`new release is`, releasedCar2)
 
+
+// exercice
+
+function changeAgeAndReference (someone) {
+    someone.age = 25;
+    someone = {
+        name: "John",
+        age: 50
+    }
+    return someone;
+}
+
+const personObject1 = {
+    name: "Alex",
+    age: 30,
+}
+
+console.log(personObject1) // This is the original object unchanged. changeAgeAndReference not called 
+
+const personObject2 = changeAgeAndReference(personObject1);
+console.log(personObject1) // why 25?//
+console.log(personObject2)
+
+
