@@ -220,6 +220,17 @@ Thus, the line `someone.age = 25;` modifies the `age` property of the original o
 The line `someone = { name: "John", age: 50 }`; `reassigns` the `someone` variable to point to a `new object in memory`.
 This does not affect the original object `(personObject1)` because `someone` is now disconnected from it.
 
+    ``Visualization in Memory:
+Before Function Call:
+personObject1 points to: { name: "Alex", age: 30 }.
+During Function Execution:
+someone initially points to { name: "Alex", age: 30 }.
+someone.age = 25 updates the object: { name: "Alex", age: 25 }.
+someone = { name: "John", age: 50 } now points someone to a new object: { name: "John", age: 50 }.
+After Function Execution:
+personObject1: Still points to { name: "Alex", age: 25 }.
+personObject2: Points to { name: "John", age: 50 }.
+```
 ```JS
     Key Takeaways:
 

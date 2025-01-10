@@ -345,4 +345,22 @@ const personObject2 = changeAgeAndReference(personObject1);
 console.log(personObject1) // why 25?//
 console.log(personObject2)
 
+//Equivalent piece of code of the above code
 
+const persObj1 = {
+    name: "Christa",
+    age: 20,
+};
+
+let person = persObj1;
+person.age = 25;
+
+person ={
+    name: "John",
+    age: 50,
+}
+
+const persObj2 = person;
+
+console.log(persObj1)
+console.log(persObj2)
