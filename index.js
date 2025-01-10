@@ -230,3 +230,50 @@ const fruitBacketSecondBucket = ["Organge", "Avocato", "Strawberry"]
 console.log(fruitBacket === fruitBucketCopy)
 console.log(fruitBacket === fruitBacketSecondBucket)
 
+
+// Comparing Objects
+
+
+const firstInt = 100;
+const secondInt = 2;
+
+function multiply(x, y) {
+    return x * y;
+}
+
+const result = multiply(firstInt, secondInt);
+console.log(result);
+
+// Pure function vs impure function : refer to above example when we spoke about passing by reference 
+
+function changeAgeImpured(person) {
+    person.age = 25;
+    return person;
+}
+
+const paul = {
+    name: 'Paul',
+    age: 30
+}
+
+console.log(paul)
+console.log(changeAgeImpured(paul));
+console.log(paul)
+
+console.log(paul === changeAgeImpured) // data was changed, we are comparing paul variable to content of the function
+
+
+function changeAgeImpure(person) {
+    person.age = 25;
+    return person;
+}
+const alex = {
+    name: 'Alex',
+    age: 30
+};
+
+const changedAlex = changeAgeImpure(alex); // it stored in a new variable 
+
+console.log(alex); // -> { name: 'Alex', age: 25 }
+console.log(changedAlex); // -> { name: 'Alex', age: 25 }
+console.log(alex === changedAlex); // -> true  // we are comparing alex variable data to changedAlex variable data

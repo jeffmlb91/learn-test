@@ -106,3 +106,34 @@ obj = { second: " reference 2"}
 When there are no references to an object remaining, as we see for the address #234 above, the JavaScript engine can perform garbage collection. This just means that the programmer has lost all references to the object and can’t use the object anymore, so the engine can safely delete it from memory.
 
 In this case, the object { first: 'reference' } is no longer accessible through any variables and is available to the engine for garbage collection.
+
+## Comparing Objects
+
+If we have two distinct objects and want to see if their properties are the same, the comparison operators will be of no use. We have to write a function that checks each property in both objects and makes sure they are the same. For two arrays, we’ll need a function that traverses the arrays and checks each item as it goes.
+
+### Passing Parameters through Functions
+
+When we pass primitive values into a function, the function copies the values into its parameters. It’s effectively the same as using =.
+
+```JS
+const firstNumber = 100;
+const secondNumber = 2;
+
+function multiply(x,y)  {
+    return x * y;
+}
+
+const result = multiply(firstNumber, secondNumber)
+console.log(result);
+
+```
+
+In the example above, we give `firstNumber` the value 100. When we pass it into multiply, the variable x gets that value, 100. The value is copied over as if we used an = assignment. Again, the value of `firstNumber` is not affected.
+
+| variables | values | addresses | objects |
+| --------- | ------ | --------- |-------- |
+| firstNumber | 100 | #333 | function(x,y) {...} |
+| secondNumber | 2 | 
+| multiply | <#333> |
+| x | 100 |
+| y | 2 |
