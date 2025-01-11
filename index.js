@@ -364,3 +364,43 @@ const persObj2 = person;
 
 console.log(persObj1)
 console.log(persObj2)
+
+
+const obje = {
+    arr: [{ x: 17 }]
+};
+
+let z = obje.arr;
+
+z = [{ x: 25 }];
+
+console.log(obje.arr[0].x);
+
+const objee = {
+    innerObj: {
+        x: 9
+    }
+};
+
+const ze = objee.innerObj;
+
+ze.x = 25;
+
+console.log(objee.innerObj.x);
+
+//Swapping variable 
+/** Assuming you have 3 variables var1, var2 and var 3
+ * 
+ * swap values so that var1 = va2; var2 = var3 and var 3 = var1
+ * 
+ */
+var1 = "first value"
+var2 = "second value"
+var3 = "Third value"
+var temp = var1;
+
+var1 = var2;
+var2 = var3;
+var3 = temp;
+
+console.log(var1, var2, var3)
