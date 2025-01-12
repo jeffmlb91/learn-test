@@ -80,3 +80,17 @@ console.log( shallowCopy === deepCopy )
 console.log( originalObj === deepCopy )
 
 
+//Exercise 3: Array References
+/**
+ * Task: Create an array, pass it to a function, and modify its content. Observe how the changes affect the original array.
+ */
+// Real-World Use Case: Managing lists in stateful applications, ensuring no side effects when updating items (e.g., a shopping cart).
+
+function modifyArray(arr) {
+    arr.push(4);
+}
+
+const originalArray = [1, 2, 3]
+const changdedArray = modifyArray(originalArray)
+
+console.log(originalArray)
