@@ -94,3 +94,23 @@ const originalArray = [1, 2, 3]
 const changdedArray = modifyArray(originalArray)
 
 console.log(originalArray)
+
+const shallowCopyOfArray = [...originalArray]
+const deepCopyArray = JSON.parse(JSON.stringify(originalArray))
+console.log("deep copy is ", deepCopyArray)
+
+console.log(deepCopyArray === shallowCopyOfArray)
+
+
+const secondArray = ["Bob", "Paul", "Mark", 3];
+
+const shallowSecondArray = [...secondArray];
+console.log('Shallow copy is ', shallowSecondArray)
+
+const deepSecondArray = JSON.parse(JSON.stringify(secondArray))
+console.log('deep copy is ', deepSecondArray)
+
+
+shallowSecondArray.push("Amelie");
+console.log(shallowSecondArray)
+console.log('deep copy is ', deepSecondArray)
