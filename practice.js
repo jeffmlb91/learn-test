@@ -114,3 +114,23 @@ console.log('deep copy is ', deepSecondArray)
 shallowSecondArray.push("Amelie");
 console.log(shallowSecondArray)
 console.log('deep copy is ', deepSecondArray)
+
+
+//Exercise 4: Reassigning References
+/**
+ * Task: Reassign a reference within a function and observe the effects.
+ */
+
+
+function reassignReference (obj) {
+    obj.name = "Changed" // Modifies the original
+    obj = { name: "Reassigned"}
+    console.log(obj)
+    return obj;
+}
+
+const myObject = { name: "Original"};
+console.log(myObject);
+
+const newObject = reassignReference(myObject);
+console.log(newObject)
