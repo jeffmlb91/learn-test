@@ -156,3 +156,76 @@ const updatedPerson = immutableChange(originalPerson)
 console.log("Original Person", originalPerson);
 console.log("Updated Person", updatedPerson)
 
+//Exercise 6: Circular References
+
+const circularObject = {};
+circularObject.self = circularObject;
+
+try {
+    const deepCopy = JSON.parse(JSON.stringify(circularObject));
+} catch (error) {
+    console.log("Error copying circular reference", error.message)
+}
+
+//Coding Challenge: Celsius to Fahrenheit Conversion
+
+
+//const askTempInCelcius = prompt("What is the temperature in Celsius?");
+
+// function celToFar (n) {
+//     return ((n * 9.0 / 5.0) + 32.0);
+// }
+
+//convert the input into a number
+//const tempInCelcius = parseFloat(askTempInCelcius);
+
+// Pass the conversted number to the function
+
+//const temperatureInFar = celToFar(tempInCelcius);
+
+//alert(`The temperature is ${temperatureInFar}`)
+
+
+//Another solution
+
+
+// const tempCel = Number(prompt("Enter temperature in celcius"));
+// const tempFar = tempCel *9/5 + 32;
+// console.log(`${tempCel} degree celcius is equal to ${tempFar} degree Fahrenheit`)
+
+
+
+// const askUserAboutTemp = Number(prompt("What is the temperature in celcius ?"))
+
+// const tempConverted = askUserAboutTemp * 9/5 + 32;
+// alert(`The temperature is ${tempConverted}`)
+
+
+//Task: Write a function that modifies a primitive value and an object. Observe the effects outside the function.
+
+function modifyValue(numerical, obj) {
+    numerical = 10;
+    obj.b.age = 23;
+    obj.b.hasDriverLicense = true;
+}
+
+const numb = 20;
+const myObjectP = {
+    a: 5,
+    b: {
+        name: "Paullette",
+        lastName: "Denzel",
+        age: 25,
+        hasDriverLicense: false
+    }
+}
+
+
+
+// Displaying original object before the function is called
+console.log("My original object is", myObjectP);
+
+//Displaying the value of the object and primative after the function has been called.
+
+modifyValue(numb, myObjectP)
+console.log("After the function has been called ", myObjectP)
