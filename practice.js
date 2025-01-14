@@ -134,3 +134,25 @@ console.log(myObject);
 
 const newObject = reassignReference(myObject);
 console.log(newObject)
+
+//Exercise 5: Avoiding Mutation
+/**
+ * Task: Write a function that modifies an object without mutating the original one.
+ */
+
+function immutableChange(obj) {
+    return {
+        ...obj,
+        age: obj.age +1,
+    };
+}
+
+const originalPerson = {
+    name: "Alice",
+    age: 25,
+}
+
+const updatedPerson = immutableChange(originalPerson)
+console.log("Original Person", originalPerson);
+console.log("Updated Person", updatedPerson)
+
