@@ -229,3 +229,24 @@ console.log("My original object is", myObjectP);
 
 modifyValue(numb, myObjectP)
 console.log("After the function has been called ", myObjectP)
+
+
+//Second example
+
+function changeValue (num, obj) {
+    num += 10;
+    obj.name = 'Christine';
+    console.log("Local value of Num", num)
+
+}
+
+const theObj = { name: "Paul"}
+const numVal = 15;
+console.log("Original value of NumVal:", numVal);
+console.log("Original value the object: ", theObj)
+
+changeValue(numVal, theObj);
+console.log(changeValue)
+
+console.log("NumVal after function is called:", numVal);
+console.log("Value the object after function is called: ", theObj)
