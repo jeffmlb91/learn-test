@@ -250,3 +250,12 @@ console.log(changeValue)
 
 console.log("NumVal after function is called:", numVal);
 console.log("Value the object after function is called: ", theObj)
+
+
+circularObj.self = circularObj;
+JSON.parse(JSON.stringify(circularObj));
+
+
+let temp = var1;
+var1 = var2;
+var2 = temp;
